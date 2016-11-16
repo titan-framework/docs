@@ -1,57 +1,188 @@
-# Site title and subtitle. This is used in _includes/header.html
-title: 'Titan Framework'
-subtitle: 'Um framework PHP para gerenciadores de conteúdo'
+# --- General options --- #
 
-# if you wish to integrate disqus on pages set your shortname here
-disqus_shortname: ''
+# url is the full website URL
+# baseurl is the website's URL without the hostname
 
-# if you use google analytics, add your tracking id here
-google_analytics_id: ''
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
+url: "http://www.titanframework.com"
+baseurl: ""
 
-# Enable/show navigation. There are there options:
-#   0 - always hide
-#   1 - always show
-#   2 - show only if posts are present
-navigation: 1
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
 
-# URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/titan-framework'
+# Of course don't forget to change the username and projectname to YOUR username and project
 
-# Default categories (in order) to appear in the navigation
-sections: [
-    ['doc', 'Documentation'],
-    ['tut', 'Tutorial'],
-    ['ref', 'Reference'],
-    ['dev', 'Developers'],
-    ['post', 'Posts']
-]
+# Name of website
+title: Titan Framework
 
-# Keep as an empty string if served up at the root. If served up at a specific
-# path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: ''
+# Short description of your site
+description: A PHP framework to create content management systems.
 
-# Dates are not included in permalinks
-permalink: none
+# --- Navigation bar options --- #
 
-# Syntax highlighting
-highlighter: rouge
+# List of links in the navigation bar
+navbar-links:
+  Documentação: "docs/preface"
+  Fórum: "https://groups.google.com/forum/#!forum/titan-framework"
+  Licença: "license"
 
-# Since these are pages, it doesn't really matter
-future: true
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/img/avatar-icon.png"
 
-# Exclude non-site files
-exclude: ['bin', 'README.md']
+# --- Footer options --- #
 
-# Use the kramdown Markdown renderer
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Camilo Carromeu
+  email: "camilo@titanframework.com"
+#  facebook: ccarromeu
+  github: titan-framework
+  twitter: titanframework
+  reddit: carromeu
+  google-plus: +camilo-carromeu
+  linkedin: carromeu
+#  xing: yourname
+  stackoverflow: 5447767/rain-maker
+#  snapchat: yourname  # eg. daattali
+  instagram: carromeu # eg. daattali
+  youtube: user/ccarromeu   # eg. user/daattali or channel/daattali
+#  spotify: yourname   # eg. daattali
+
+# Select which links to show in the footer
+footer-links-active:
+  rss: true
+  facebook: false
+  email: true
+  twitter: true
+  google-plus: false
+  github: true
+  reddit: false
+  linkedin: false
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: false
+  youtube: false
+  spotify: false
+
+# Select which share links to show in posts
+share-links-active:
+  twitter: false
+  facebook: false
+  google: false
+  linkedin: false
+
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+url-pretty: "TitanFramework.com"
+
+# --- Misc --- #
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+#disqus: ""
+
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
+
+# Facebook App ID
+# fb_app_id: ""
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 50
+
+# --- Don't need to touch anything below here (but you can if you want) --- #
+
+# Output options (more information on Jekyll's site)
+timezone: "America/Campo-Grande"
 markdown: kramdown
-redcarpet:
-    extensions: [
-        'no_intra_emphasis',
-        'fenced_code_blocks',
-        'autolink',
-        'strikethrough',
-        'superscript',
-        'with_toc_data',
-        'tables',
-        'hardwrap'
-    ]
+highlighter: rouge
+permalink: /:title/
+paginate: 5
+
+# permalink: /:year-:month-:day-:title/
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
+
+# Use tags pages (not recommended if you are deploying via GitHub pages, only set to true if deploying locally with ruby)
+link-tags: false
+
+# Exclude these files from production site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+  - Vagrantfile
+
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
+
+gems:
+  - jekyll-paginate
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189

@@ -1,3 +1,9 @@
-*.sw?
+# project
 _site
-_pages
+.sass-cache
+.vagrant
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
