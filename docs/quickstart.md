@@ -2,6 +2,7 @@
 layout: page
 title: Quickstart
 subtitle: Instanciando em 3 minutos sua aplicação.
+comments: true
 ---
 
 Para instanciar sua primeira aplicação, utilize o [Composer](http://getcomposer.org):
@@ -21,4 +22,4 @@ Ao término, sua instância estará rodando em **http://localhost:8090**. Para a
 
 Neste ambiente, todas as mensagens de e-mail são capturadas pelo [MailHog](https://github.com/mailhog/MailHog) e você pode visualiá-las no endereço **http://localhost:8025**.
 
-Agora você pode modificar o código desta instância-base para implementar seus próprios requisitos.
+Agora você pode modificar o código desta instância-base para implementar seus próprios requisitos. Para isso, consulte a [documentacão](/docs/preface) na íntegra do *framework*.
