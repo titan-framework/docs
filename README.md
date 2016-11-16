@@ -1,3 +1,4 @@
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bruth/jekyll-docs-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Titan Framework Website
+=======================
 
-Read the docs: http://bruth.github.io/jekyll-docs-template
+Website of Titan Framework, avaliable at http://titanframework.com, with complete technical documentation, books, forum, tutorials and tips.
