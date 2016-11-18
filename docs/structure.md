@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Arquitetura
-subtitle: Principais conceitos arquiteturais.
+title: Estrutura de Diretórios
+subtitle: Estrutura de diretórios das instâncias.
 comments: true
 ---
 
