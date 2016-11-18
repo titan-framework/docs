@@ -11,6 +11,7 @@ subtitle: Prefácio da documentação técnica.
 - [Estrutura de Diretórios](/docs/structure)
 - [Tipos de Usuários, Grupos e Permissões](/docs/authentication)
 - [Repositório Global](/docs/repository)
+- [Boas Práticas](/docs/practices)
 
 ## Getting Start
 
