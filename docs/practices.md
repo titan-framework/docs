@@ -14,13 +14,13 @@ Esta seção apresentará as convenções recomendadas para Titan Framework, que
 - O nome de todas as entidades do banco de dados devem estar em **inglês**;
 - O nome de todas as entidades do banco de dados devem estar no **singular**;
 - O nome de todas as entidades do banco de dados devem estar em **caixa baixa** (*lower case*);
-- Entidades "**mandatórias**", ou seja, cujo a existência, o nome ou o comportamento não possam ser parametrizados pelos arquivos de marcação da instância, devem ser **precedidas por ****_underscore_** (por exemplo, o componente nativo “**global.generic**” necessita que as tabelas que representam o modelo de dados de suas seções tenham as colunas “**_user**”, “_**create**” e “**_update**”); e
+- Entidades "**mandatórias**", ou seja, cujo a existência, o nome ou o comportamento não possam ser parametrizados pelos arquivos de marcação da instância, devem ser **precedidas por ****_underscore_** (por exemplo, o componente nativo "**global.generic**" necessita que as tabelas que representam o modelo de dados de suas seções tenham as colunas "**_user**", "_**create**" e "**_update**"); e
 - Caso o nome da entidade seja composto de duas ou mais palavras, elas devem estar separadas por **_underscore_** (p.e., "my_table").
 
 ## Convenções de Código
 
 - Os nomes de variáveis, funções, classes e demais entidades devem estar em **inglês**;
-- Os nomes de variáveis locais, atributos e funções devem estar em **_Camel Case_** (a primeira palavra do nome é iniciada por letra minúscula, a próxima palavra é iniciada com maiúscula e todas são unidas sem qualquer caracter), tal como "$myFirstVar" ou “myFunction ()”;
+- Os nomes de variáveis locais, atributos e funções devem estar em **_Camel Case_** (a primeira palavra do nome é iniciada por letra minúscula, a próxima palavra é iniciada com maiúscula e todas são unidas sem qualquer caracter), tal como "$myFirstVar" ou "myFunction ()";
 - Caso seja um atributo de classe privado, o nome deve ser precedido com um *underscore* (p.e., "$_myPrivateAttribute");
 - Os nomes das classes devem estar em **_Pascal Case_** (todas as palavras são iniciadas maiúsculas e são unidas sem espaço), tal como "MyClass";
 - Os nomes das variáveis globais devem estar em caixa alta (*upper case*), tal como "$_MY_VAR";

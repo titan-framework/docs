@@ -5,15 +5,15 @@ subtitle: Tipos nativos que instanciam campos de formulários.
 comments: true
 ---
 
-Os tipos do Titan são organizados em uma relação de pai e filho (classe derivada). Assim, o tipo "**global.Amount**" é derivado do tipo “**global.Integer**”, ou seja, o primeiro utiliza o segundo como base, mas implementa comportamentos específicos. Por exemplo, no caso do "global.Amount" o campo que aparecerá no formulário, bem como o número mostrado em uma ação de visualização, serão formatados por meio de uma máscara que separa os 'milhares' por ponto.
+Os tipos do Titan são organizados em uma relação de pai e filho (classe derivada). Assim, o tipo "**global.Amount**" é derivado do tipo "**global.Integer**", ou seja, o primeiro utiliza o segundo como base, mas implementa comportamentos específicos. Por exemplo, no caso do "global.Amount" o campo que aparecerá no formulário, bem como o número mostrado em uma ação de visualização, serão formatados por meio de uma máscara que separa os 'milhares' por ponto.
 
-Esta característica permite que um desenvolvedor estenda facilmente os tipos nativos. Por exemplo, ao criar um novo tipo denominado "ProjectName.MyType" que herda o tipo nativo “global.Radio”, este novo tipo terá todas as funcionalidades do tipo nativo. Se observarmos, entretanto, o tipo nativo “global.Radio”, veremos que ele herda o tipo “global.Enum”. Este último, por sua vez, herda o tipo “global.Phrase”. Assim, podemos concluir que o tipo “ProjectName.MyType” têm características de todos estes tipos, que foram sobreescritas hierarquicamente na relação hereditária. Na figura abaixo é mostrada esta relação hereditária entre os tipos nativos do Titan.
+Esta característica permite que um desenvolvedor estenda facilmente os tipos nativos. Por exemplo, ao criar um novo tipo denominado "ProjectName.MyType" que herda o tipo nativo "global.Radio", este novo tipo terá todas as funcionalidades do tipo nativo. Se observarmos, entretanto, o tipo nativo "global.Radio", veremos que ele herda o tipo "global.Enum". Este último, por sua vez, herda o tipo "global.Phrase". Assim, podemos concluir que o tipo "ProjectName.MyType" têm características de todos estes tipos, que foram sobreescritas hierarquicamente na relação hereditária. Na figura abaixo é mostrada esta relação hereditária entre os tipos nativos do Titan.
 
 ![Relação hereditária entre os tipos nativos do Titan.](/docs/images/image_5.png)
 
-Repare que no Titan para fazer até mesmo pequenas distinções comportamentais como a do tipo "global.Amount" em relação ao “global.Integer”, que fogem das configurações nativas disponíveis nos atributos de parametrização no XML, é necessário estender os tipos existentes.
+Repare que no Titan para fazer até mesmo pequenas distinções comportamentais como a do tipo "global.Amount" em relação ao "global.Integer", que fogem das configurações nativas disponíveis nos atributos de parametrização no XML, é necessário estender os tipos existentes.
 
-Todos os tipos do Titan são mapeados em arquivos de marcação XML com o uso da tag "**field**". Todos eles compartilham alguns atributos básicos, mas podem também ter atributos específicos. Por exemplo, o tipo “Double” possui um atributo denominado “*precision*”, onde o desenvolvedor pode estipular qual o número de casas decimais do campo. Os atributos padrões, comuns a todos os tipos, são:
+Todos os tipos do Titan são mapeados em arquivos de marcação XML com o uso da tag "**field**". Todos eles compartilham alguns atributos básicos, mas podem também ter atributos específicos. Por exemplo, o tipo "Double" possui um atributo denominado "*precision*", onde o desenvolvedor pode estipular qual o número de casas decimais do campo. Os atributos padrões, comuns a todos os tipos, são:
 
 - **type**: nome do tipo;
 - **column**: nome da coluna na tabela no banco de dados;

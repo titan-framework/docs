@@ -26,7 +26,7 @@ Este campo possui alguns atributos específicos. São eles:
 - **show-details:** Por padrão este atributo possui valor '*true*'. Quando ativo, irá exibir ao lado do arquivo associado as seguintes informações: nome do arquivo, tamanho (em *bytes*), *mime type* e descrição (se houver); e
 - **resolution:** Quando for uma imagem, o valor deste atributo determinará as dimensões do *thumbnail*](http://pt.wikipedia.org/wiki/Thumbnail) exibido.
 
-Além destes atributos, este tipo permite que seja declarada uma lista de *tags* "**mime-type**" internas. Trata-se dos tipos de arquivos (identificados por seu “MIME Type”](http://en.wikipedia.org/wiki/Internet_media_type)) que o campo aceitará. Estes tipos devem ter sido previamente declarados no arquivo de configuração “**configure/archive.xml**”. Caso não seja declarada nenhuma restrição no *field*, ou seja, não haja nehuma *tag* “**mime-type**” interna, o campo aceitará todos os tipos de arquivo habilitados para a instância.
+Além destes atributos, este tipo permite que seja declarada uma lista de *tags* "**mime-type**" internas. Trata-se dos tipos de arquivos (identificados por seu "MIME Type"](http://en.wikipedia.org/wiki/Internet_media_type)) que o campo aceitará. Estes tipos devem ter sido previamente declarados no arquivo de configuração "**configure/archive.xml**". Caso não seja declarada nenhuma restrição no *field*, ou seja, não haja nehuma *tag* "**mime-type**" interna, o campo aceitará todos os tipos de arquivo habilitados para a instância.
 
 Por exemplo, para declarar um campo que aceita apenas imagens, teríamos:
 

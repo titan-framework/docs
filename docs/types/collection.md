@@ -5,7 +5,7 @@ subtitle: Representação de coleções de dados.
 comments: true
 ---
 
-O tipo "Collection" objetiva permitir a criação de tuplas *in loco* em tabelas relacionadas à entidade em que o campo deste tipo é inserido, ou seja, permite criar, apagar e exibir elementos vinculados ao formulário em uma relação “**um para vários**” (“1 x *n*”). Desta forma, este tipo irá renderizar para o usuário uma 'sub-lista' dos itens relacionados e um 'sub-formulário' para a criação de novos itens. A definição destes elementos deverá ser feita em um XML próprio, que será referenciado no field por meio do atributo específico denominado “**xml-path**”.
+O tipo "Collection" objetiva permitir a criação de tuplas *in loco* em tabelas relacionadas à entidade em que o campo deste tipo é inserido, ou seja, permite criar, apagar e exibir elementos vinculados ao formulário em uma relação "**um para vários**" ("1 x *n*"). Desta forma, este tipo irá renderizar para o usuário uma 'sub-lista' dos itens relacionados e um 'sub-formulário' para a criação de novos itens. A definição destes elementos deverá ser feita em um XML próprio, que será referenciado no field por meio do atributo específico denominado "**xml-path**".
 
 Por exemplo, suponha a seguinte estrutura de tabelas:
 
@@ -40,7 +40,7 @@ CREATE TABLE public.author (
 {% endhighlight %}
 
 
-Repare que na tabela 'author' há uma chave estrangeira para a tabela 'book', formando uma relação "1 x *n*". O “Collection” permitirá que o usuário, no formulário de edição de livros, crie autores que são automaticamente vinculados ao livro editado. O tipo conta, portanto, com um formulário que permite a inserção de autores e uma listagem dos autores inseridos (que permite deletá-los). Assim, é necessário prover a este tipo o modelo de dados deste formulário e desta listagem por meio de um XML próprio, criado na pasta da seção:
+Repare que na tabela 'author' há uma chave estrangeira para a tabela 'book', formando uma relação "1 x *n*". O "Collection" permitirá que o usuário, no formulário de edição de livros, crie autores que são automaticamente vinculados ao livro editado. O tipo conta, portanto, com um formulário que permite a inserção de autores e uma listagem dos autores inseridos (que permite deletá-los). Assim, é necessário prover a este tipo o modelo de dados deste formulário e desta listagem por meio de um XML próprio, criado na pasta da seção:
 
 {% highlight xml linenos %}
 <?xml version="1.0" encoding="UTF-8"?>
@@ -68,6 +68,6 @@ A renderização do campo do exemplo pode ser visualizada na figura abaixo.
 
 Algumas informações importantes sobre o tipo "Collection":
 
-- Somente é possível editar um campo do tipo "Collection" em ações de edição, ou seja, a tupla "mãe" já precisa estar criada para que o “Collection” saiba a qual entidade ele deve relacionar o item criado;
+- Somente é possível editar um campo do tipo "Collection" em ações de edição, ou seja, a tupla "mãe" já precisa estar criada para que o "Collection" saiba a qual entidade ele deve relacionar o item criado;
 - Como, na prática, são formulários independentes, os campos "Collection" sempre ficarão no final da página de edição, independente do local em que você os colocou no XML. Em ações de visualização a posição escolhida é respeitada; e
 - Sempre utilize os mesmos campos na *tag* 'view' e na *tag* 'form' do XML do "Collection". O JavaScript que cria uma nova linha na visualização lida apenas com os campos declarados na *tag* 'form', ou seja, se hoverem números distintos de colunas na 'view' e na 'form' a visualização ficará prejudicada.

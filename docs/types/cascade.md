@@ -5,11 +5,11 @@ subtitle: Representação de encadeados hierarquicamente.
 comments: true
 ---
 
-O tipo "Cascade" é derivado de “Select”. Objetiva vincular tuplas de uma tabela de forma “recursiva”, ou seja, representar entidades que possuem chave estrangeira para ela mesma, caracterizando relações de 'tuplas-pais' e 'tuplas-filhas'.
+O tipo "Cascade" é derivado de "Select". Objetiva vincular tuplas de uma tabela de forma "recursiva", ou seja, representar entidades que possuem chave estrangeira para ela mesma, caracterizando relações de 'tuplas-pais' e 'tuplas-filhas'.
 
 Terá um atributo denominado "**link-father**", que contêm o nome da coluna na tabela relacionada que aponta para a 'tupla-pai'.
 
-Para exemplificar, considere a tabela "organogram.sector" mostrada na Figura 15. Sua coluna “father” é uma chave estrangeira para a chave primária (coluna “id”) da própria tabela. O DDL desta entidade é o seguinte:
+Para exemplificar, considere a tabela "organogram.sector" mostrada na Figura 15. Sua coluna "father" é uma chave estrangeira para a chave primária (coluna "id") da própria tabela. O DDL desta entidade é o seguinte:
 
 {% highlight sql linenos %}
 CREATE TABLE organogram.sector (
@@ -35,7 +35,7 @@ CREATE TABLE organogram.sector (
 {% endhighlight %}
 
 
-Assim, um "setor" pode estar (ou não) vinculado a um “setor-pai”. Em tabelas com tuplas que irão se relacionar aos setores é inserida uma coluna com uma chave estrangeira para esta tabela:
+Assim, um "setor" pode estar (ou não) vinculado a um "setor-pai". Em tabelas com tuplas que irão se relacionar aos setores é inserida uma coluna com uma chave estrangeira para esta tabela:
 
 {% highlight sql linenos %}
 ALTER TABLE tabela ADD COLUMN coluna INTEGER;

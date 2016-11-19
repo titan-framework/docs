@@ -5,7 +5,7 @@ subtitle: Representação de campo multivalorado.
 comments: true
 ---
 
-Este tipo é muito semelhante ao "Select" mas, ao invés de representar uma relação “um para vários” (“1 x *n*”), possibilitará a representação de uma relação “**vários para vários**” (“*n* x *n*”). Para utilizá-lo será necessário criar no banco de dados uma tabela de relacionamento, ou seja, a tabela que irá fazer a relação “*n* x *n*” das tuplas de duas outras tabelas. Para abrigar a declaração desta tabela, este tipo possui os seguintes atributos específicos
+Este tipo é muito semelhante ao "Select" mas, ao invés de representar uma relação "um para vários" ("1 x *n*"), possibilitará a representação de uma relação "**vários para vários**" ("*n* x *n*"). Para utilizá-lo será necessário criar no banco de dados uma tabela de relacionamento, ou seja, a tabela que irá fazer a relação "*n* x *n*" das tuplas de duas outras tabelas. Para abrigar a declaração desta tabela, este tipo possui os seguintes atributos específicos
 
 - **relation: **O nome da tabela de relacionamento;
 - **primary:** É o nome da chave primária da tabela mapeada pelo XML e deve ser preenchido quando o *field* estiver sendo utilizado em uma *tag* "search", ou seja, em um formulário de busca;
@@ -52,7 +52,7 @@ CREATE TABLE store.movie_genre (
 
 O resultado da execução dos SQLs acima é a estrutura mostrada na figura abaixo.
 
-![Relacionamento "*n* x *n*" que será representado com o uso do tipo “Multiply”.](/docs/images/image_20.jpg)
+![Relacionamento "*n* x *n*" que será representado com o uso do tipo "Multiply".](/docs/images/image_20.jpg)
 
 No exemplo, vamos considerar que o 'gênero' é uma caracterização do 'filme'. Assim, quando um filme é cadastrado são vinculados gêneros a ele. Haverá, portanto, uma diferença sutil nas chaves estrangeiras da tabela "movie_genre". Repare que quando um gênero é apagado, há uma restrição caso este gênero esteja vinculado a algum filme. Entretanto, no caso de um filme ser apagado, todas as ligações deste filme com gêneros são apagados em cascata.
 
