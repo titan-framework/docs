@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+	<title>Titan Framework: Native Classes Reference</title>
+	<parser>
+		<target>phpdoc</target>
+	</parser>
+	<transformer>
+		<target>phpdoc</target>
+	</transformer>
+	<files>
+		<directory>..\core\class</directory>
+	</files>
+	<logging>
+		<level>quiet</level>
+	</logging>
+</phpdoc>

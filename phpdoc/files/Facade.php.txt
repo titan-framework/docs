@@ -1,0 +1,35 @@
+<?php
+/**
+ * In development. Will implement facade design pattern to use in frontend.
+ *
+ * @author Camilo Carromeu <camilo@carromeu.com>
+ * @category class
+ * @package core
+ * @subpackage util
+ * @copyright 2005-2017 Titan Framework
+ * @license http://www.titanframework.com/license/ BSD License (3 Clause)
+ * @see Instance
+ */
+class Facade
+{
+	static private $facade = FALSE;
+
+	private final function __construct ()
+	{
+
+	}
+
+	static public function singleton ($path)
+	{
+		if (self::$facade !== FALSE)
+			return self::$facade;
+
+		$class = __CLASS__;
+
+		self::$facade = new $class ($path);
+
+		return self::$facade;
+	}
+
+}
+

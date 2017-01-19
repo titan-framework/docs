@@ -129,6 +129,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-paginate
+  rouge
 
 BUNDLED WITH
    1.13.6
