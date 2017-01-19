@@ -106,7 +106,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1808</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1826</span>
                                 </a>
                             </li>
                             <li>
@@ -136,10 +136,10 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1711663830"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-449853283"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1711663830" class="accordion-body collapse in">
+            <div id="namespace-449853283" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                     
@@ -246,6 +246,16 @@
                         <section class="row-fluid public">
                             <section class="span4">
                                                                     <a href="../classes/VersionHelper.html#method_singleton" class="">singleton()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getTitanVersion" class="">getTitanVersion()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getTitanBuild" class="">getTitanBuild()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getTitanRelease" class="">getTitanRelease()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_usingAutoDeploy" class="">usingAutoDeploy()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getAppVersion" class="">getAppVersion()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getAppBuild" class="">getAppBuild()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getAppRelease" class="">getAppRelease()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getAppEnvironment" class="">getAppEnvironment()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getAppDate" class="">getAppDate()</a><br />
+                                                                    <a href="../classes/VersionHelper.html#method_getAppAuthor" class="">getAppAuthor()</a><br />
                                                             </section>
                             <section class="span4">
                                                                     <em>No public properties found</em>
@@ -270,7 +280,15 @@
                                                                     <a href="../classes/VersionHelper.html#method___construct" class="">__construct()</a><br />
                                                             </section>
                             <section class="span4">
-                                                                    <a href="../classes/VersionHelper.html#property_version" class="">$version</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_helper" class="">$helper</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_titanVersion" class="">$titanVersion</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_titanBuild" class="">$titanBuild</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_usingAutoDeploy" class="">$usingAutoDeploy</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_appVersion" class="">$appVersion</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_appBuild" class="">$appBuild</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_appEnvironment" class="">$appEnvironment</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_appDate" class="">$appDate</a><br />
+                                                                    <a href="../classes/VersionHelper.html#property_appAuthor" class="">$appAuthor</a><br />
                                                             </section>
                             <section class="span4">
                                 <em>N/A</em>
@@ -347,10 +365,202 @@
 
                                                                     <div class="row-fluid">
         <div class="span8 content class">
-            <a id="property_version" name="property_version" class="anchor"></a>
+            <a id="property_helper" name="property_helper" class="anchor"></a>
             <article class="property">
-                <h3 class="private ">$version</h3>
-                <pre class="signature">$version : </pre>
+                <h3 class="private ">$helper</h3>
+                <pre class="signature">$helper : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_titanVersion" name="property_titanVersion" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$titanVersion</h3>
+                <pre class="signature">$titanVersion : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_titanBuild" name="property_titanBuild" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$titanBuild</h3>
+                <pre class="signature">$titanBuild : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_usingAutoDeploy" name="property_usingAutoDeploy" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$usingAutoDeploy</h3>
+                <pre class="signature">$usingAutoDeploy : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_appVersion" name="property_appVersion" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$appVersion</h3>
+                <pre class="signature">$appVersion : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_appBuild" name="property_appBuild" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$appBuild</h3>
+                <pre class="signature">$appBuild : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_appEnvironment" name="property_appEnvironment" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$appEnvironment</h3>
+                <pre class="signature">$appEnvironment : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_appDate" name="property_appDate" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$appDate</h3>
+                <pre class="signature">$appDate : </pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_appAuthor" name="property_appAuthor" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$appAuthor</h3>
+                <pre class="signature">$appAuthor : </pre>
                 <p><em></em></p>
                 
 
@@ -394,6 +604,266 @@
         <aside class="span4 detailsbar">
             <h1><i class="icon-arrow-down"></i></h1>
                             <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTitanVersion" name="method_getTitanVersion" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTitanVersion()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTitanVersion() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTitanBuild" name="method_getTitanBuild" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTitanBuild()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTitanBuild() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTitanRelease" name="method_getTitanRelease" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTitanRelease()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTitanRelease() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_usingAutoDeploy" name="method_usingAutoDeploy" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">usingAutoDeploy()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">usingAutoDeploy() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAppVersion" name="method_getAppVersion" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAppVersion()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAppVersion() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAppBuild" name="method_getAppBuild" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAppBuild()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAppBuild() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAppRelease" name="method_getAppRelease" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAppRelease()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAppRelease() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAppEnvironment" name="method_getAppEnvironment" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAppEnvironment()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAppEnvironment() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAppDate" name="method_getAppDate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAppDate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAppDate() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getAppAuthor" name="method_getAppAuthor" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getAppAuthor()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getAppAuthor() </pre>
+                <p><em></em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
                                                             <dl>
                                                                             </dl>
             <h2>Tags</h2>
@@ -479,7 +949,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on January 19th, 2017 at 10:52.
+                    on January 19th, 2017 at 15:24.
                 </section>
             </section>
         </section>
