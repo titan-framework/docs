@@ -35,8 +35,9 @@ subtitle: Prefácio da documentação técnica.
 
 ## Publicação
 
-- [Configurando o ambiente de teste, homologação e/ou produção](/docs/environment)
-- [Publicando sua instância no ambiente de _deploy_](/docs/deploy)
+- [Configurando o ambiente](/docs/environment) de teste, homologação e/ou produção.
+- [Publicando sua instância](/docs/deploy) no ambiente de _deploy_.
+- Configurando o _script_ de _auto-deploy_ para instâncias em repositórios [SVN](/docs/auto-deploy-svn) e [GIT](/docs/auto-deploy/git).
 
 ## Livros
 

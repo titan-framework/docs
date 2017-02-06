@@ -12,4 +12,4 @@ Há um _script_ de preparação do ambiente. Para utilizá-lo, basta configurar 
 ```bash
 wget -O - http://titanframework.com/environment/prepare.sh | bash
 ```
-Este _script_ configura um ambiente otimizado para o Titan Framework, incluindo todos os pacotes opcionais para uso pleno de todas as funcionalidades.
+Este _script_ configura um ambiente otimizado para o Titan Framework, incluindo os pacotes opcionais para uso pleno de todas as funcionalidades.
