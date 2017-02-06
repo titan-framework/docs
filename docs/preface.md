@@ -33,6 +33,11 @@ subtitle: Prefácio da documentação técnica.
 - Geração automática do [Manual do Usuário](/docs/tutorials/manual).
 - Ativação do [sistema de _Scheduler Jobs_](/docs/tutorials/scheduler-jobs).
 
+## Publicação
+
+- [Configurando o ambiente de teste, homologação e/ou produção](/docs/environment)
+- [Publicando sua instância no ambiente de _deploy_](/docs/deploy)
+
 ## Livros
 
  Cookbook                                | Master Chef               | Toppings
