@@ -66,9 +66,9 @@ echo "Configuring services..."
 
 echo "PostgreSQL..."
 
-wget -qO http://www.titanframework.com/environment/settings/pg_hba.conf /etc/postgresql/9.4/main/pg_hba.conf
+wget -qO /etc/postgresql/9.4/main/pg_hba.conf http://www.titanframework.com/environment/settings/pg_hba.conf
 
-wget -qO http://www.titanframework.com/environment/settings/postgresql.conf /etc/postgresql/9.4/main/postgresql.conf
+wget -qO /etc/postgresql/9.4/main/postgresql.conf http://www.titanframework.com/environment/settings/postgresql.conf
 
 /etc/init.d/postgresql restart
 
@@ -76,11 +76,11 @@ echo "Done!"
 
 echo "PHP 7.0 FPM..."
 
-wget -qO http://www.titanframework.com/environment/settings/php-fpm.ini /etc/php/7.0/fpm/php.ini
+wget -qO /etc/php/7.0/fpm/php.ini http://www.titanframework.com/environment/settings/php-fpm.ini
 
-wget -qO http://www.titanframework.com/environment/settings/php-cli.ini /etc/php/7.0/cli/php.ini
+wget -qO /etc/php/7.0/cli/php.ini http://www.titanframework.com/environment/settings/php-cli.ini
 
-wget -qO http://www.titanframework.com/environment/settings/php-www.conf /etc/php/7.0/fpm/pool.d/www.conf
+wget -qO /etc/php/7.0/fpm/pool.d/www.conf http://www.titanframework.com/environment/settings/php-www.conf
 
 /etc/init.d/php7.0-fpm restart
 
@@ -90,9 +90,17 @@ echo "Nginx..."
 
 rm -rf /var/www/html
 
+mkdir -p /var/www/app
+
 mkdir -p /var/www/log
 
-wget -qO http://www.titanframework.com/environment/settings/nginx-default /etc/nginx/sites-available/default
+echo "<?php\nphpinfo ();" > /var/www/app/index.php
+
+chown -R root:staff /var/www/app
+find /var/www/app -type d -exec chmod 775 {} \;
+find /var/www/app -type f -exec chmod 664 {} \;
+
+wget -qO /etc/nginx/sites-available/default http://www.titanframework.com/environment/settings/nginx-default
 
 /etc/init.d/nginx restart
 
@@ -100,7 +108,7 @@ echo "Done!"
 
 echo "SSH..."
 
-wget -qO http://www.titanframework.com/environment/settings/sshd_config /etc/ssh/sshd_config
+wget -qO /etc/ssh/sshd_config http://www.titanframework.com/environment/settings/sshd_config
 
 /etc/init.d/ssh restart
 
@@ -108,7 +116,7 @@ echo "Done!"
 
 echo "CRON..."
 
-wget -qO http://www.titanframework.com/environment/settings/cron /etc/cron.d/titan
+wget -qO /etc/cron.d/titan http://www.titanframework.com/environment/settings/cron
 
 /etc/init.d/cron reload
 /etc/init.d/cron restart
