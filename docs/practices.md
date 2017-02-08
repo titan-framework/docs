@@ -33,5 +33,6 @@ Esta seção apresentará as convenções recomendadas para Titan Framework, que
 - Sempre feche parênteses e chaves na mesma coluna ou na mesma linha em que foram abertos;
 - Busque utilizar linhas em branco entre funções e métodos, entre classes e entre expressões com variáveis distintas;
 - Em todos os arquivos deve-se utilizar o padrão de cabeçalhos e comentários especificado pelo [PHPDoc](http://www.phpdoc.org/);
-- Sempre que aplicável, utilize *Design Patterns*; e
-- Jamais utilize *deprecated features*.
+- Sempre que aplicável, utilize *Design Patterns*;
+- Jamais utilize *deprecated features*; e
+- Jamais utilize **_short open tags_** ('\<?') para abrir blocos de código PHP, ou seja, utilize sempre a notação longa ('\<?php').

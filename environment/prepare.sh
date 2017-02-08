@@ -94,7 +94,8 @@ mkdir -p /var/www/app
 
 mkdir -p /var/www/log
 
-echo "<?php\nphpinfo ();" > /var/www/app/index.php
+echo "<?php
+phpinfo ();" > /var/www/app/index.php
 
 chown -R root:staff /var/www/app
 find /var/www/app -type d -exec chmod 775 {} \;
