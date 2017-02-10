@@ -74,6 +74,14 @@ wget -qO /etc/postgresql/9.4/main/postgresql.conf http://www.titanframework.com/
 
 echo "Done!"
 
+echo "Memcached..."
+
+wget -qO /etc/memcached.conf http://www.titanframework.com/environment/settings/memcached.conf
+
+/etc/init.d/memcached restart
+
+echo "Done!"
+
 echo "PHP 7.0 FPM..."
 
 wget -qO /etc/php/7.0/fpm/php.ini http://www.titanframework.com/environment/settings/php-fpm.ini
