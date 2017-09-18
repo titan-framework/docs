@@ -8,7 +8,7 @@ comments: true
 Para instanciar sua primeira aplicação, utilize o [Composer](http://getcomposer.org):
 
 ```bash
-php composer.phar create-project titan-framework/instance path/to/local/folder
+composer create-project titan-framework/instance path/to/local/folder
 ```
 
 Após finalizar o comando acima, inicialize a *box* do [Vagrant](http://vagrantup.com) para executar sua aplicação:
