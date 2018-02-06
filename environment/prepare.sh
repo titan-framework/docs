@@ -12,23 +12,12 @@ apt-get -y dist-upgrade
 
 echo "Done!"
 
-echo "Adding Dotdeb (http://dotdeb.org) to sources of APT..."
-
-echo "deb http://packages.dotdeb.org jessie all" | tee -a /etc/apt/sources.list.d/dotdeb.list
-echo "deb-src http://packages.dotdeb.org jessie all" | tee -a /etc/apt/sources.list.d/dotdeb.list
-
-wget -qO - http://www.dotdeb.org/dotdeb.gpg | apt-key add -
-
-apt-get -y update
-
-echo "Done!"
-
 echo "Install a lot of dependencies..."
 
 echo "postfix postfix/mailname string localhost" | debconf-set-selections
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y antiword aptitude build-essential bzip2 curl default-jdk git libav-tools locales locate mailutils memcached nginx ntpdate php7.0-fpm php7.0-cli php7.0-curl php7.0-dev php7.0-gd php7.0-imagick php7.0-ldap php7.0-mbstring php7.0-mcrypt php7.0-memcached php7.0-pgsql php7.0-sqlite php-pear postfix postgresql-9.4 subversion xpdf-utils unzip vim
+DEBIAN_FRONTEND=noninteractive apt-get install -y antiword aptitude build-essential bzip2 curl default-jdk git libav-tools locales locate mailutils memcached nginx ntpdate php7.0-fpm php7.0-cli php7.0-curl php7.0-dev php7.0-gd php7.0-imagick php7.0-ldap php7.0-mbstring php7.0-mcrypt php7.0-memcached php7.0-pgsql php7.0-sqlite php-pear postfix postgresql-9.6 subversion xpdf-utils unzip vim
 
 echo "Done!"
 
@@ -66,9 +55,9 @@ echo "Configuring services..."
 
 echo "PostgreSQL..."
 
-wget -qO /etc/postgresql/9.4/main/pg_hba.conf http://www.titanframework.com/environment/settings/pg_hba.conf
+wget -qO /etc/postgresql/9.6/main/pg_hba.conf http://www.titanframework.com/environment/settings/pg_hba.conf
 
-wget -qO /etc/postgresql/9.4/main/postgresql.conf http://www.titanframework.com/environment/settings/postgresql.conf
+wget -qO /etc/postgresql/9.6/main/postgresql.conf http://www.titanframework.com/environment/settings/postgresql.conf
 
 /etc/init.d/postgresql restart
 
