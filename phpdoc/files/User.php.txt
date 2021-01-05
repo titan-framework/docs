@@ -7,7 +7,7 @@
  * @package core
  * @subpackage security
  * @copyright 2005-2017 Titan Framework
- * @license http://www.titanframework.com/license/ BSD License (3 Clause)
+ * @license https://www.titanframework.com/license/ BSD License (3 Clause)
  * @see Security, UserType, Group, AjaxLogon, AjaxPasswd, Ldap
  */
 class User

@@ -7,9 +7,9 @@
  * @package core
  * @subpackage util
  * @copyright 2005-2017 Titan Framework
- * @license http://www.titanframework.com/license/ BSD License (3 Clause)
+ * @license https://www.titanframework.com/license/ BSD License (3 Clause)
  * @see Instance, Section, Action
- * @link http://www.titanframework.com/docs/tutorials/scheduler-jobs/
+ * @link https://www.titanframework.com/docs/tutorials/scheduler-jobs/
  * @link https://en.wikipedia.org/wiki/Cron
  */
 class Schedule

@@ -9,7 +9,7 @@
  * @package core
  * @subpackage api
  * @copyright 2005-2017 Titan Framework
- * @license http://www.titanframework.com/license/ BSD License (3 Clause)
+ * @license https://www.titanframework.com/license/ BSD License (3 Clause)
  * @see View, Search, Api, ApiAuth, ApiEntity, ApiException
  * @todo Create Item class for array replace.
  */

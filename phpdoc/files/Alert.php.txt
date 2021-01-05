@@ -7,9 +7,9 @@
  * @package core
  * @subpackage alert
  * @copyright 2005-2017 Titan Framework
- * @license http://www.titanframework.com/license/ BSD License (3 Clause)
+ * @license https://www.titanframework.com/license/ BSD License (3 Clause)
  * @see Instance
- * @link http://www.titanframework.com/docs/tutorials/alerts/
+ * @link https://www.titanframework.com/docs/tutorials/alerts/
  */
 class Alert
 {
