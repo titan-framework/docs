@@ -17,7 +17,7 @@ echo "Install a lot of dependencies..."
 echo "postfix postfix/mailname string localhost" | debconf-set-selections
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | debconf-set-selections
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y antiword aptitude build-essential bzip2 curl default-jdk git imagemagick libav-tools locales locate mailutils memcached nginx ntpdate php7.0-fpm php7.0-cli php7.0-curl php7.0-dev php7.0-gd php7.0-imagick php7.0-ldap php7.0-mbstring php7.0-mcrypt php7.0-memcached php7.0-pgsql php7.0-sqlite php-pear postfix postgresql-9.6 subversion xpdf-utils unzip vim
+DEBIAN_FRONTEND=noninteractive apt-get install -y antiword aptitude build-essential bzip2 curl default-jdk git imagemagick ffmpeg locales locate mailutils memcached nginx ntpdate php7.4-fpm php7.4-cli php7.4-curl php7.4-dev php7.4-gd php-imagick php7.4-ldap php7.4-mbstring php-memcached php7.4-pgsql php7.4-sqlite3 php-pear postfix postgresql-13 subversion xpdf-utils unzip vim
 
 echo "Done!"
 
@@ -55,9 +55,9 @@ echo "Configuring services..."
 
 echo "PostgreSQL..."
 
-wget -qO /etc/postgresql/9.6/main/pg_hba.conf https://www.titanframework.com/environment/settings/pg_hba.conf
+wget -qO /etc/postgresql/13/main/pg_hba.conf https://www.titanframework.com/environment/settings/pg_hba.conf
 
-wget -qO /etc/postgresql/9.6/main/postgresql.conf https://www.titanframework.com/environment/settings/postgresql.conf
+wget -qO /etc/postgresql/13/main/postgresql.conf https://www.titanframework.com/environment/settings/postgresql.conf
 
 /etc/init.d/postgresql restart
 
@@ -73,13 +73,13 @@ echo "Done!"
 
 echo "PHP 7.0 FPM..."
 
-wget -qO /etc/php/7.0/fpm/php.ini https://www.titanframework.com/environment/settings/php-fpm.ini
+wget -qO /etc/php/7.4/fpm/php.ini https://www.titanframework.com/environment/settings/php-fpm.ini
 
-wget -qO /etc/php/7.0/cli/php.ini https://www.titanframework.com/environment/settings/php-cli.ini
+wget -qO /etc/php/7.4/cli/php.ini https://www.titanframework.com/environment/settings/php-cli.ini
 
-wget -qO /etc/php/7.0/fpm/pool.d/www.conf https://www.titanframework.com/environment/settings/php-www.conf
+wget -qO /etc/php/7.4/fpm/pool.d/www.conf https://www.titanframework.com/environment/settings/php-www.conf
 
-/etc/init.d/php7.0-fpm restart
+/etc/init.d/php7.4-fpm restart
 
 echo "Done!"
 

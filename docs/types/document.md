@@ -13,7 +13,7 @@ O componente [global.Simple](/docs/components/simple) é semelhante ao [global.G
 
 Para facilitar a explicação do tipo, vamos supor que eu tenha o seguinte cenário: uma instância que gerencie estagiários. Nela usuários podem se cadastrar por meio de um formulário público e se inscrever em estágios que foram previamente cadastrados. Para cada estagiário deferido eu poderia lançar informações adicionais e, ao final, lançar seu certificado. Para lançar este certificado, bastaria inserir um "<field type="Document" ... />" no formulário em que são lançadas informações específicas da relação "usuário x estágio".
 
-Assim, para utilizar o tipo 'global.Document' precisamos primeiro instanciar uma seção do componente 'global.Simple' onde será configurado o texto padrão do certificado. Por exemplo, vamos considerar o certificado padrão de estágio da [Embrapa](http://embrapa.br) (frente e verso):
+Assim, para utilizar o tipo 'global.Document' precisamos primeiro instanciar uma seção do componente 'global.Simple' onde será configurado o texto padrão do certificado. Por exemplo, vamos considerar o certificado padrão de estágio da [Embrapa](https://embrapa.br) (frente e verso):
 
 ![Certificado padrão da Embrapa.](/docs/types/document/image_0.jpg)
 
@@ -111,7 +111,7 @@ A partir deste momento, bastaria referenciar a seção no 'configure/business.xm
 
 Até aqui não entramos no tipo propriamente dito. Apenas preparamos o modelo (conteúdo) que o tipo mais tarde utilizará como base.
 
-O próximo passo é a definição da estrutura do PDF que será gerado para o documento. O tipo 'global.Document' utiliza a biblioteca FPDF para geração do documento final. Esta biblioteca dispõe de uma API em PHP cujo a documentação pode ser vista no link: [http://www.fpdf.org/](http://www.fpdf.org/)
+O próximo passo é a definição da estrutura do PDF que será gerado para o documento. O tipo 'global.Document' utiliza a biblioteca FPDF para geração do documento final. Esta biblioteca dispõe de uma API em PHP cujo a documentação pode ser vista no link: [https://www.fpdf.org/](https://www.fpdf.org/)
 
 Como cada documento pode variar MUITO em relação a seu layout, decidi trabalhar com um esquema de templates que utilizam diretamente a API do FPDF. Um template de documento é uma dupla de arquivos homônimos: um XML e um PHP. Estes arquivos podem estar em qualquer diretório da instância (por padrão, em 'local/document/').
 

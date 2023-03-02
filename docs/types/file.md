@@ -22,11 +22,11 @@ Este campo possui alguns atributos específicos. São eles:
 
 - **owner-only:** Quando este atributo existe e têm valor '*true*', os arquivos previamente listados para associação são apenas aqueles que foram enviados pelo usuário;
 - **show-details:** Por padrão este atributo possui valor '*true*'. Quando ativo, irá exibir ao lado do arquivo associado as seguintes informações: nome do arquivo, tamanho (em *bytes*), *mime type* e descrição (se houver); e
-- **resolution:** Quando for uma imagem, o valor deste atributo determinará as dimensões do *thumbnail*](http://pt.wikipedia.org/wiki/Thumbnail) exibido.
+- **resolution:** Quando for uma imagem, o valor deste atributo determinará as dimensões do *thumbnail*](https://pt.wikipedia.org/wiki/Thumbnail) exibido.
 - **owner-only:** Veja abaixo.
 - **public:** Veja abaixo.
 
-Além destes atributos, este tipo permite que seja declarada uma lista de *tags* "**mime-type**" internas. Trata-se dos tipos de arquivos (identificados por seu [MIME Type](http://en.wikipedia.org/wiki/Internet_media_type)) que o campo aceitará. Estes tipos devem ter sido previamente declarados no arquivo de configuração "**configure/archive.xml**". Caso não seja declarada nenhuma restrição no *field*, ou seja, não haja nehuma *tag* "**mime-type**" interna, o campo aceitará todos os tipos de arquivo habilitados para a instância.
+Além destes atributos, este tipo permite que seja declarada uma lista de *tags* "**mime-type**" internas. Trata-se dos tipos de arquivos (identificados por seu [MIME Type](https://en.wikipedia.org/wiki/Internet_media_type)) que o campo aceitará. Estes tipos devem ter sido previamente declarados no arquivo de configuração "**configure/archive.xml**". Caso não seja declarada nenhuma restrição no *field*, ou seja, não haja nehuma *tag* "**mime-type**" interna, o campo aceitará todos os tipos de arquivo habilitados para a instância.
 
 Por exemplo, para declarar um campo que aceita apenas imagens, teríamos:
 
@@ -54,7 +54,7 @@ Assim como no novo tipo [Fck](/docs/types/fck), o tipo 'File' suporta a exibiç�
 
 Para instalar o "avconv" no Windows, baixe a biblioteca "libav" no link abaixo, descompacte-a em seu sistema de arquivos e insira o caminho absoluto até a pasta "usr\bin" da biblioteca no path de seu Windows.
 
-[http://builds.libav.org/windows/](http://builds.libav.org/windows/)
+[https://builds.libav.org/windows/](https://builds.libav.org/windows/)
 
 Para instalar no Debian, faça:
 

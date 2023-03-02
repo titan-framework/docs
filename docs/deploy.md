@@ -15,7 +15,7 @@ Repare que o _script_ encontra-se na pasta 'update' do _core_ do Titan, que por 
 
 O _script_ funciona apenas com instância em repositórios **GIT**. Registre a _SSH key_ para acesso direto do servidor ao repositório GIT, pois isto possibilitará a posterior ativação do [sistema de _auto-deploy_](/docs/auto-deploy/git) do Titan (veja como cadastrar a _SSH Key_ no [GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/) e no [GitLab](https://docs.gitlab.com/ce/ssh/README.html)).
 
-O caminho onde a aplicação será instalada é, por padrão, "**/var/www/app**". Você pode alterar este caminho no comando acima, mas neste caso deverá alterar também na configuração do [Nginx](http://nginx.com) (no arquivo '/etc/nginx/sites-available/default').
+O caminho onde a aplicação será instalada é, por padrão, "**/var/www/app**". Você pode alterar este caminho no comando acima, mas neste caso deverá alterar também na configuração do [Nginx](https://nginx.com) (no arquivo '/etc/nginx/sites-available/default').
 
 O último parâmetro é o nome da _branch_ no GIT que o _script_ irá considerar. Ele irá procurar a _tag_ mais recente nesta _branch_ e irá instanciar esta revisão (e não a _head revision_). Esta branch deverá ser a mesma configurada no [sistema de _auto-deploy_](/docs/auto-deploy/git).
 

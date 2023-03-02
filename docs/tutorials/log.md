@@ -20,7 +20,7 @@ Para ativá-lo, verifique se a tag '**log**' está ativa no '**configure/titan.x
 </titan-configuration>
 ```
 
-O atributo '**db-path**' contém o caminho para banco de dados [SQLite](http://sqlite.org) onde será armazanado o log. Este arquivo será criado automaticamente e, portanto, deve estar em um diretório na qual sua instância possa escrever. Por convenção o arquivo é criado normalmente na pasta de cache ("**cache/log.db**").
+O atributo '**db-path**' contém o caminho para banco de dados [SQLite](https://sqlite.org) onde será armazanado o log. Este arquivo será criado automaticamente e, portanto, deve estar em um diretório na qual sua instância possa escrever. Por convenção o arquivo é criado normalmente na pasta de cache ("**cache/log.db**").
 
 Com os passos executados até aqui o sistema já irá gravar as atividades de todas as seções instanciadas com componentes nativos.
 

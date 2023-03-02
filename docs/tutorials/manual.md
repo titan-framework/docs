@@ -123,6 +123,6 @@ Fazendo isto um novo botão irá surgir no menu de acesso rápido:
 
 O diretório referenciado permite que o manual seja totalmente customizado. Para customizar o manual basta copiar da pasta '**[cache-path]/doc/**' os arquivos que deseja customizar (respeitando a estrutura de diretório). A customização é válida para os arquivos "**settings.ini**", "**sort_hints.txt**" e para todos os arquivos contidos na pasta "**input/**".
 
-Desta forma, antes de gerar o manual da instância, o Titan copia e prioriza os arquivos modificados e contidos na pasta apontada pelo atributo "**doc-path**", de tal forma que as customizações do usuário sejam aplicadas na versão final. Para entender como alterar estes arquivos, você deverá estudar a [documentação do TypeFriendly](http://static.invenzzia.org/docs/tf/0_1/single/en/).
+Desta forma, antes de gerar o manual da instância, o Titan copia e prioriza os arquivos modificados e contidos na pasta apontada pelo atributo "**doc-path**", de tal forma que as customizações do usuário sejam aplicadas na versão final. Para entender como alterar estes arquivos, você deverá estudar a [documentação do TypeFriendly](https://static.invenzzia.org/docs/tf/0_1/single/en/).
 
 Assim, a versão gerada inicialmente pelo Titan pode ser totalmente modificada, criando-se um manual com conteúdo que não pode ser gerado automaticamente, mas sem perder tempo com o conteúdo que pode.

@@ -7,7 +7,7 @@ comments: true
 
 Utilizado para possibilitar a entrada e representação de URLs. Possui um atributo específico, denominado '**prefix**' que pode ser setado com um prefixo obrigatório para as URLs inseridas.
 
-Por exemplo, na figura abaixo é mostrado o uso deste campo para que o usuário possa entrar com a URL para seu currículo na [Plataforma Lattes](http://lattes.cnpq.br). Neste caso o atributo 'prefix' foi atribuído com "http://lattes.cnpq.br/". É importante notar que, neste caso, o atributo '**max-length**', herdado de "Phrase", foi preenchido com o valor '38', ou seja, o tamanho do conteúdo de 'prefix' somado ao tamanho máximo da entrada do usuário.
+Por exemplo, na figura abaixo é mostrado o uso deste campo para que o usuário possa entrar com a URL para seu currículo na [Plataforma Lattes](https://lattes.cnpq.br). Neste caso o atributo 'prefix' foi atribuído com "https://lattes.cnpq.br/". É importante notar que, neste caso, o atributo '**max-length**', herdado de "Phrase", foi preenchido com o valor '38', ou seja, o tamanho do conteúdo de 'prefix' somado ao tamanho máximo da entrada do usuário.
 
 ![Campo de entrada de dados do tipo "Url".](/docs/images/image_9.png)
 
@@ -19,7 +19,7 @@ O mapeamento deste tipo no formulário é mostrado abaixo:
 	column="lattes"
 	label="URL"
 	max-length="38"
-	prefix="http://lattes.cnpq.br/"
+	prefix="https://lattes.cnpq.br/"
 	unique="true"
 />
 {% endhighlight %}

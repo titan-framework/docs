@@ -7,7 +7,7 @@ comments: true
 
 Este _script_ de _auto-update_ para instâncias do Titan objetiva manter instâncias atualizadas em ambientes remotos de teste, homologação e/ou produção a partir da consulta sistemática ao repositório de código SVN onde está versionado seu código. Caso sua instância utilize um repositório de código GIT, por favor, acesse as instruções para ativação do [_script_ de _auto-deploy_ para instâncias em repositórios GIT](/docs/auto-deploy/git). Este _script_ funciona delegando ao _schedular job_ do sistema operacional a tarefa de manter a instância atualizada no servidor.
 
-O _script_ é baseado no conceito de _database migrations_ implementado pelo [Ruby on Rails](http://guias.rubyonrails.com.br/migrations.html), que nada mais é que a gestão e rastreabilidade de mudanças incrementais no banco de dados da aplicação.
+O _script_ é baseado no conceito de _database migrations_ implementado pelo [Ruby on Rails](https://guias.rubyonrails.com.br/migrations.html), que nada mais é que a gestão e rastreabilidade de mudanças incrementais no banco de dados da aplicação.
 
 Para que o _script_ de _auto-update_ funcione corretamente é necessário criar na raiz da instância a seguinte estrutura de diretórios (caso não exista):
 
@@ -54,7 +54,7 @@ Além da criação desta estrutura você precisa inserir configurações adicion
 
 O atributo '**environment**' diz qual é o ambiente em que a instância está executando. É fundamental para que o _script_ saiba qual _file of paths_ deverá considerar. Os atributos '**svn-login**' e '**svn-password**' devem ser configurados com um usuário e senha do repositório SVN com o código da instância. O atributo '**svn-users**' define quais usuários possuem _commits_ que podem ser atualizados, ou seja, caso seja commitado um _file of paths_ por um usuário não especificado nesta diretiva, ele será desconsiderado no momento do _update_. O atributo '**backup**' diz se deverá ou não ser realizado o backup do banco de dados antes que sejam aplicadas alterações. Repare que o _backup_ apenas será efetuado se houverem alterações a serem aplicadas no DB. **Atenção!** Caso não seja explicitamente setado o valor "_false_" nesta diretiva, o _script_ de _auto-update_ sempre tentará fazer o _backup_, ou seja, o valor padrão deste atributo é "_true_". A pasta de _backup_ será a mesma utilizada pela funcionalidade [_backup on demand_](/docs/tutorials/backup/). Após a validade setada nesta funcionalidade os arquivos de _backup_ do _auto-update_ serão automaticamente apagados, preservando o espaço fisíco do servidor.
 
-As demais configurações ('**file-mode**', '**dir-mode**', '**owner**' e '**group**') devem ser setadas apenas caso a instância não esteja em um ambiente [Debian](http://debian.org). Referem-se às permissões que os arquivos atualizados receberão.
+As demais configurações ('**file-mode**', '**dir-mode**', '**owner**' e '**group**') devem ser setadas apenas caso a instância não esteja em um ambiente [Debian](https://debian.org). Referem-se às permissões que os arquivos atualizados receberão.
 
 A primeira vez que o _script_ é executado ele cria automaticamente uma tabela "**_version**" no _schema_ do Titan no banco de dados. Esta tabela irá controlar as versões do BD, o autor da modificação e quando ela foi aplicada.
 

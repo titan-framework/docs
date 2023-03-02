@@ -7,7 +7,7 @@ comments: true
 
 Boas práticas de programação são um conjunto de regras informais que visam melhorar a qualidade das aplicações e simplificar a sua manutenção, reduzindo significativamente a probabilidade de erros em suas aplicações, além de facilitar o entendimento de novos códigos de forma rápida e completa.
 
-Esta seção apresentará as convenções recomendadas para Titan Framework, que está sendo adequado às normas propostas no modelo de convenções do [PSR](http://www.php-fig.org/psr) (*PHP Standards Recommendation*). O objetivo de abordar este tema agora é garantir que as diretrizes elencadas sejam seguidas desde as primeiras instâncias desenvolvidas pelo leitor.
+Esta seção apresentará as convenções recomendadas para Titan Framework, que está sendo adequado às normas propostas no modelo de convenções do [PSR](https://www.php-fig.org/psr) (*PHP Standards Recommendation*). O objetivo de abordar este tema agora é garantir que as diretrizes elencadas sejam seguidas desde as primeiras instâncias desenvolvidas pelo leitor.
 
 ## Convenções para o Banco de Dados
 
@@ -32,7 +32,7 @@ Esta seção apresentará as convenções recomendadas para Titan Framework, que
 - Sempre utilize **tabulação** para a **identação** (jamais utilize o "espaço"). Se necessário, configure na IDE de desenvolvimento pois algumas, por padrão, utilizam o caracter de espaço;
 - Sempre feche parênteses e chaves na mesma coluna ou na mesma linha em que foram abertos;
 - Busque utilizar linhas em branco entre funções e métodos, entre classes e entre expressões com variáveis distintas;
-- Em todos os arquivos deve-se utilizar o padrão de cabeçalhos e comentários especificado pelo [PHPDoc](http://www.phpdoc.org/);
+- Em todos os arquivos deve-se utilizar o padrão de cabeçalhos e comentários especificado pelo [PHPDoc](https://www.phpdoc.org/);
 - Sempre que aplicável, utilize *Design Patterns*;
 - Jamais utilize *deprecated features*; e
 - Jamais utilize **_short open tags_** ('\<?') para abrir blocos de código PHP, ou seja, utilize sempre a notação longa ('\<?php').

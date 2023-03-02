@@ -7,7 +7,7 @@ comments: true
 
 Este _script_ de _auto-update_ para instâncias do Titan objetiva manter instâncias atualizadas em ambientes remotos de teste, homologação e/ou produção a partir da consulta sistemática ao repositório GIT onde está versionado seu código. Caso sua instância utilize um repositório de código SVN, por favor, acesse as instruções para ativação do [_script_ de _auto-deploy_ para instâncias em repositórios SVN](/docs/auto-deploy/svn). Este _script_ funciona delegando ao _schedular job_ do sistema operacional a tarefa de manter a instância atualizada no servidor.
 
-O _script_ é baseado no conceito de _database migrations_ implementado pelo [Ruby on Rails](http://guias.rubyonrails.com.br/migrations.html), que nada mais é que a gestão e rastreabilidade de mudanças incrementais no banco de dados da aplicação.
+O _script_ é baseado no conceito de _database migrations_ implementado pelo [Ruby on Rails](https://guias.rubyonrails.com.br/migrations.html), que nada mais é que a gestão e rastreabilidade de mudanças incrementais no banco de dados da aplicação.
 
 Para que o _script_ de _auto-update_ funcione corretamente é necessário criar na raiz da instância a seguinte estrutura de diretórios (caso não exista):
 
@@ -46,7 +46,7 @@ Além da criação desta estrutura você precisa inserir configurações adicion
 
 O atributo '**environment**' diz qual é o ambiente em que a instância está executando. Deve existir no seu repositório GIT uma _branch_ homônima. O sistema de _auto-deploy_ irá "vigiar" esta _branch_ buscando novas _tags_, ou seja, para informa o _script_ que uma nova versão deve ser disponibilizada no ambiente, basta criar uma nova _tag_ nesta _branch_. Deve-se, portanto, controlar quem pode publicar código no ambiente por meio das permissões de _commit_ e _merge_ da _branch_. Por exemplo, todos os desenvolvedores podem commitar código para a _branch_ '_master_' e fazer _merge_ da '_master_' na '_test_', mas somente os gerentes de projeto podem fazer _merge_ da '_test_' na '_production_'.
 
-Recomenda-se fortemente que os nomes das _tags_ criadas nas _branches_ sigam o padrão [Semantic Versioning 2.0.0](http://semver.org). Mais especificamente, cada _tag_ é nomeada no formato **V.YY.MM-pPP**, onde:
+Recomenda-se fortemente que os nomes das _tags_ criadas nas _branches_ sigam o padrão [Semantic Versioning 2.0.0](https://semver.org). Mais especificamente, cada _tag_ é nomeada no formato **V.YY.MM-pPP**, onde:
 
 - **V** é a versão-macro em desenvolvimento da aplicação;
 - **YY.MM** é o _milestone_, representado por ano e mês (com dois dígitos cada) da data prevista (_due date_); e
@@ -64,7 +64,7 @@ Seguindo este padrão de nomes, o Titan irá disponibilizar na interface da inst
 
 O atributo '**backup**' diz se deverá ou não ser realizado o _backup_ do banco de dados antes que sejam aplicadas alterações. Repare que o _backup_ apenas será efetuado se houverem alterações a serem aplicadas no DB. **Atenção!** Caso não seja explicitamente setado o valor "_false_" nesta diretiva, o _script_ de _auto-update_ sempre tentará fazer o _backup_, ou seja, o valor padrão deste atributo é "_true_". A pasta de _backup_ será a mesma utilizada pela funcionalidade [_backup on demand_](/docs/tutorials/backup/). Após a validade setada nesta funcionalidade os arquivos de _backup_ do _auto-update_ serão automaticamente apagados, preservando o espaço fisíco do servidor.
 
-As demais configurações ('**file-mode**', '**dir-mode**', '**owner**' e '**group**') devem ser setadas apenas caso a instância não esteja em um ambiente [Debian](http://debian.org). Referem-se às permissões que os arquivos atualizados receberão.
+As demais configurações ('**file-mode**', '**dir-mode**', '**owner**' e '**group**') devem ser setadas apenas caso a instância não esteja em um ambiente [Debian](https://debian.org). Referem-se às permissões que os arquivos atualizados receberão.
 
 A primeira vez que o _script_ é executado ele cria automaticamente uma tabela "**_version**" no _schema_ do Titan no banco de dados. Esta tabela irá controlar as versões do BD, o autor da modificação e quando ela foi aplicada.
 

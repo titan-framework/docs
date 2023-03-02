@@ -7,7 +7,7 @@ comments: true
 
 A **REST-Like API** do Titan, como não poderia deixar de ser, segue os princípios arquiteturais básicos de REST, implementando uma camada de comunicação simples baseada no protocolo HTTP puro. Assim, esta é uma camada de comunicação cliente/servidor sem estado (*stateless*), e dispõe das operações HTTP básicas (**POST**, **GET**, **PUT** e **DELETE**) permitindo a obtenção de conteúdo a partir de serviços (**URI**) em texto puro (**JSON**). Há uma vasta documentação sobre os princípios inerentes a interfaces REST disponíveis na Web.
 
-A implementação desta camada no Titan utiliza, inicialmente, o padrão [**Embrapa-Auth**](http://cloud.cnpgc.embrapa.br/embrapa-auth) para autenticação. Conforme já citado, por seguir diretrizes arquiteturais REST, trata-se de uma camada sem estado (*stateless protocol*). Por conta disso, **cada requisição precisa ser individualmente autenticada na instância**.
+A implementação desta camada no Titan utiliza, inicialmente, o padrão [**Embrapa-Auth**](https://cloud.cnpgc.embrapa.br/embrapa-auth) para autenticação. Conforme já citado, por seguir diretrizes arquiteturais REST, trata-se de uma camada sem estado (*stateless protocol*). Por conta disso, **cada requisição precisa ser individualmente autenticada na instância**.
 
 Para auxiliar na compreensão do uso da REST-Like API, foi [disponibilizada uma instância-exemplo do Titan que a utiliza](https://github.com/titan-framework/sample-api). Nesta instância há uma seção CRUD básica (Menu &raquo; Testes &raquo; CRUD), com um formulário com diversos campos. Esta seção permite simular o comportamento de diversos tipos de dados do Titan na REST-Like API. Para testar a comunicação com a instância, foi disponibilizado também um teste unitário em Java (pasta "**test**" na raiz da instância).
 
@@ -36,7 +36,7 @@ E foi, em seguida, criado o arquivo "**configure/api.xml**" com o seguinte conte
 </api-mapping>
 {% endhighlight %}
 
-Reparem que este arquivo possibilita diversas tags '**application**', de forma que pode-se habilitar diferentes aplicações que se comunicarão com a instância. O atributo '**protocol**' refere-se ao padrão de autenticação utilizado. Conforme já dito, até o momento o único padrão implementado no Titan é o [Embrapa-Auth](http://cloud.cnpgc.embrapa.br/embrapa-auth), portanto, é importante que você tenha lido e compreendido este padrão.
+Reparem que este arquivo possibilita diversas tags '**application**', de forma que pode-se habilitar diferentes aplicações que se comunicarão com a instância. O atributo '**protocol**' refere-se ao padrão de autenticação utilizado. Conforme já dito, até o momento o único padrão implementado no Titan é o [Embrapa-Auth](https://cloud.cnpgc.embrapa.br/embrapa-auth), portanto, é importante que você tenha lido e compreendido este padrão.
 
 Conforme definido no Embrapa-Auth, é possível efetuar a autenticação da requisição de três maneiras (que podem ser combinadas): **aplicação**, **cliente** e **usuário**. O atributo '**auth**' define estas combinações. Assim, o Titan aceita os seguintes valores para este atributo:
 
@@ -104,13 +104,13 @@ Para cada dispositivo, é possível obter o identificador e chave-privada do cli
 
 Em relação aos serviços da camada que podem ser acessados, a REST-Like API dispões de URIs pré-definidas (pertencentes ao CORE) e provê ao desenvolvedor a capacidade de criar suas próprias URIs em componentes e seções específicas.
 
-As URIs pré-definidas são acessíveis pela adição do sufixo "api" à URL da instância, seguido do nome do serviço. Por exemplo, "http://seu-host.com/instância/api/disambiguation".
+As URIs pré-definidas são acessíveis pela adição do sufixo "api" à URL da instância, seguido do nome do serviço. Por exemplo, "https://seu-host.com/instância/api/disambiguation".
 
 A seguir, são listados os serviços (*endpoints*) nativos do Titan e a explicação de como ativar seus próprios serviços ém seções específicas.
 
 ## Serviços Nativos
 
-### GET http://seu-host.com/instância/api/*auth*
+### GET https://seu-host.com/instância/api/*auth*
 
 Este serviço verifica as credenciais de acesso da requisição, retornando o *HTTP status code* "**200**" em caso de sucesso. Caso esteja autenticando o usuário (por meio dos métodos CLIENT-AS-USER, USER, USER-BY-ID e USER-BY-MAIL), este serviço também retorna os dados do usuário em formato JSON:
 
@@ -126,7 +126,7 @@ Este serviço verifica as credenciais de acesso da requisição, retornando o *H
 }
 ```
 
-### POST ou PUT http://seu-host.com/instância/api/*register*
+### POST ou PUT https://seu-host.com/instância/api/*register*
 
 Em se tratando de dispositivos móveis com sistema operacional Android, é possível afirmar que o usuário do aplicativo têm, necessariamente, uma conta do Google. Sem ela, a menos que a distribuição do aplicativo seja feita pelo seu binário (APK), o usuário não poderia tê-lo obtido, afinal, a conta do Google é necessária para o acesso ao Google Play.
 
@@ -142,7 +142,7 @@ Para que este serviço funcione **é necessário que o suporte ao logon por meio
 
 Futuramente, esta URI permitirá também o registro com o uso da API da Apple (Apple ID) para sistemas iOS.
 
-### POST ou PUT http://seu-host.com/instância/api/*disambiguation*
+### POST ou PUT https://seu-host.com/instância/api/*disambiguation*
 
 Outro ponto fundamental no desenvolvimento de aplicativos móveis é garantir a integridade dos dados locais em relação aos do servidor remoto. É fácil garantir esta integridade quando não existe criação de tuplas no dispositivo móvel. Nestes casos, o aplicativo assume uma arquitetura "provedor-consumidor", onde o servidor será o provedor de dados e o aplicativo irá apenas "consumí-los". Desta forma, o controle da sincronia de dados deverá ser responsável por consultar o servidor e obter as novas tuplas e aquelas que já existiam, mas foram alteradas. A abordagem utilizada neste caso têm os seguintes passos:
 
@@ -180,17 +180,17 @@ CREATE SEQUENCE titan._disambiguation INCREMENT 1 MINVALUE 1 MAXVALUE 9223372036
 
 Desta forma, cada consulta ao serviço incrementa o *serial* garantindo que cada dispositivo receberá um prefixo único. No dispositivo este prefixo é armazenado localmente (usando a *Shared Preferences*), conforme veremos em um novo e-mail.
 
-### POST ou PUT http://seu-host.com/instância/api/*gcm*
+### POST ou PUT https://seu-host.com/instância/api/*gcm*
 
-Este serviço permite registrar um dispositivo móvel para que receba mensagens na **Action Bar**. Para esta funcionalidade o [Google Cloud Message](http://developer.android.com/google/gcm/index.html) foi integrado ao [sistema de alertas do Titan](/docs/tutorials/alerts).
+Este serviço permite registrar um dispositivo móvel para que receba mensagens na **Action Bar**. Para esta funcionalidade o [Google Cloud Message](https://developer.android.com/google/gcm/index.html) foi integrado ao [sistema de alertas do Titan](/docs/tutorials/alerts).
 
 Esta funcionalidade funciona apenas caso esteja sendo utilizada a autenticação por meio dos métodos **CLIENT** ou **CLIENT-AS-USER**, uma vez que a chave GCM será armazenada na tabela '**_mobile**' para o dispositivo (previamente registrado) que está efetuando a requisição.
 
-### GET http://seu-host.com/instância/api/*alerts*
+### GET https://seu-host.com/instância/api/*alerts*
 
-### DELETE http://seu-host.com/instância/api/*alert/ + ID*
+### DELETE https://seu-host.com/instância/api/*alert/ + ID*
 
-### PUT http://seu-host.com/instância/api/*alert/ + ID*
+### PUT https://seu-host.com/instância/api/*alert/ + ID*
 
 Estes métodos permitem que o usuário do dispositivo móvel interaja com o [sistema de alertas do Titan](/docs/tutorials/alerts). Perceba que é necessário que o usuário esteja autenticado (por meio dos métodos **CLIENT-AS-USER**, **USER**, **USER-BY-ID** e **USER-BY-MAIL**).
 
@@ -219,7 +219,7 @@ Conforme explicado no e-mail anterior, a API do Titan aceita (até o momento) re
 
 Ao fazer uma requisição para a REST-Like API, esta passará primeiro por um *bootstrap* (no CORE, em '**api/api.php**'). Este avalia se a requisição é para um dos serviços globais (tratados na primeira parte desta documentação). Caso não seja, o Titan irá procurar uma seção homônima. Por exemplo:
 
-### GET http://seu-host.com/instância/api/*embassy/active*
+### GET https://seu-host.com/instância/api/*embassy/active*
 
 Repare que após a URL da instância vêm a palavra-chave "**api**". Por padrão, esta é a palavra-chave que define o "subdiretório" na *friendly* URL que diz que a requisição deve ser tratada pela REST-Like API. Você pode alterá-la (ou incluí-la, caso não exista), alterando o "**.htaccess**" da raiz da instância:
 
@@ -233,7 +233,7 @@ Para saber quem deve processar a requisição, o Titan procura no componente da 
 
 Caso este terceiro nível não seja passado, por exemplo:
 
-### POST http://seu-host.com/instância/api/*embassy*
+### POST https://seu-host.com/instância/api/*embassy*
 
 Então o Titan procurará na pasta "**\_api**" um script homônimo ao método utilizado (neste caso "**[core]/repos/component/global.generic/\_api/_post.php_**").
 
@@ -307,27 +307,27 @@ Outro ponto que merece destaque está relacionado aos passos 4 e 5 do fluxo supr
 
 Tudo o que foi exposto até aqui já está implementado no componente "**global.generic**". Assim, acessando a pasta "**\_api**" deste componente, você encontrará *scripts* para os seguintes serviços:
 
-#### GET http://seu-host.com/instância/api/seção/*ID ou CODE*
+#### GET https://seu-host.com/instância/api/seção/*ID ou CODE*
 
 Retorna o JSON do modelo de dados do item referenciado por ID ou CODE.
 
-#### GET http://seu-host.com/instância/api/seção/list/*TIMESTAMP*
+#### GET https://seu-host.com/instância/api/seção/list/*TIMESTAMP*
 
 Retorna um vetor em JSON com o modelo de dados de todos os itens criados ou alterados após o TIMESTAMP passado.
 
-#### GET http://seu-host.com/instância/api/seção/*active*
+#### GET https://seu-host.com/instância/api/seção/*active*
 
 Retorna um vetor em JSON com a lista de todos os IDs ou CODEs dos itens ativos no servidor.
 
-#### POST http://seu-host.com/instância/api/*seção*
+#### POST https://seu-host.com/instância/api/*seção*
 
 Envia, por POST, um item para o servidor.
 
-#### PUT http://seu-host.com/instância/api/seção/*ID ou CODE*
+#### PUT https://seu-host.com/instância/api/seção/*ID ou CODE*
 
 Envia, por PUT, um item para o servidor. Caso não exista, o item é criado.
 
-#### DELETE http://seu-host.com/instância/api/seção/*ID ou CODE*
+#### DELETE https://seu-host.com/instância/api/seção/*ID ou CODE*
 
 Apaga o item referenciado por ID ou CODE.
 

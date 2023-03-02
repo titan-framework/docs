@@ -7,7 +7,7 @@ comments: true
 
 ![Campo de entrada de dados do tipo "Fck".](/docs/types/fck/image_0.png)
 
-Utilizado para possibilitar a entrada e representação de texto com formatação HTML. Oferece ao usuário um editor de textos que possibilita formatar o conteúdo de forma amigável (ou seja, um editor [WYSIWYG](http://pt.wikipedia.org/wiki/WYSIWYG)). Uma representação da entrada deste tipo de dado pode ser visualizada na figura acima. É representado no banco de dados pelo tipo '*text*':
+Utilizado para possibilitar a entrada e representação de texto com formatação HTML. Oferece ao usuário um editor de textos que possibilita formatar o conteúdo de forma amigável (ou seja, um editor [WYSIWYG](https://pt.wikipedia.org/wiki/WYSIWYG)). Uma representação da entrada deste tipo de dado pode ser visualizada na figura acima. É representado no banco de dados pelo tipo '*text*':
 
 {% highlight sql linenos %}
 ALTER TABLE tabela ADD COLUMN coluna TEXT;
@@ -34,7 +34,7 @@ O tipo "Fck" possui um aprimorado suporte à arquivos multimídia, possibilitand
 
 Para instalar o "avconv" no Windows, baixe a biblioteca "libav" no link abaixo, descompacte-a em seu sistema de arquivos e insira o caminho absoluto até a pasta "usr\bin" da biblioteca no path de seu Windows.
 
-[http://builds.libav.org/windows/](http://builds.libav.org/windows/)
+[https://builds.libav.org/windows/](https://builds.libav.org/windows/)
 
 Para instalar no Debian, faça:
 
